@@ -1,0 +1,10 @@
+Package: cpsmar1990s
+Type: Package
+Title: ASEC, 2000s
+Version: 0.1
+Date: 2015-08-30
+Authors@R: 'JJ Chen <jiajia.chern@gmail.com> [aut,cre]'
+Description: This R data package includes data from Annual Social and Economic Supplement of the Current Population Survey (ASEC, i.e., CPS March Supplement), 1990-1999.
+License: CC0
+LazyData: TRUE
+URL: https://github.com/jjchern/cpsmar2000s
