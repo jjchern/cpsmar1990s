@@ -25,7 +25,32 @@ Research based on the IPUMS-CPS database should cite it as follows:
 
 # Installation
 
-Install from bitbucket with 
+Install from github with 
 ```r
 devtools::install_github("jjchern/cpsmar1990s")
 ```
+
+Since there're 10 years of data, the package is kind of big (about 86 MB). It might take a while to download.
+
+# Usage
+
+```{r, message=FALSE, warning=FALSE}
+library(cpsmar1990s)
+library(dplyr)
+
+# All the datasets
+ls("package:cpsmar1990s", all = TRUE)
+
+# All variables in cpsmar1993
+names(cpsmar1993)
+
+# Select a few variables
+cpsmar1993 %>% 
+  select(year, statefip, age, sex, race, educ99, fullpart) 
+
+# Each variable is a "labelled" vector (from the `haven` package)
+cpsmar1994$sex %>% str
+attr(cpsmar1994$sex, "label") # like Stata's label
+attr(cpsmar1994$sex, "labels") # like Stata's label values
+```
+
